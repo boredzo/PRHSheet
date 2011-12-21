@@ -7,3 +7,7 @@
 - No need to talk to `NSApp` for something that's none of its business
 - No more callback object and selector; instead, you pass a block
 - Automatically orders itself out when you end or the user ends the sheet
+
+### Sample
+
+See [the `runSheet:` action method in the included test app's app delegate](https://github.com/boredzo/PRHSheet/blob/master/PRHSheet/PRHAppDelegate.m#L17).
