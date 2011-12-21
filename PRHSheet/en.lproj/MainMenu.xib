@@ -1296,7 +1296,7 @@
 			<object class="NSWindowTemplate" id="972006081">
 				<int key="NSWindowStyleMask">15</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{335, 390}, {480, 360}}</string>
+				<string key="NSWindowRect">{{182, 266}, {480, 360}}</string>
 				<int key="NSWTFlags">1954021376</int>
 				<string key="NSWindowTitle">A document window</string>
 				<string key="NSWindowClass">NSWindow</string>
@@ -1340,7 +1340,7 @@
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="454163518"/>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {1366, 746}}</string>
+				<string key="NSScreenRect">{{0, 0}, {1024, 746}}</string>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
@@ -1414,7 +1414,7 @@
 						<object class="NSTextField" id="126219775">
 							<reference key="NSNextResponder" ref="652733128"/>
 							<int key="NSvFlags">274</int>
-							<string key="NSFrame">{{17, 60}, {242, 64}}</string>
+							<string key="NSFrame">{{30, 60}, {242, 64}}</string>
 							<reference key="NSSuperview" ref="652733128"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="560889561"/>
@@ -1429,7 +1429,7 @@ IGFsZXJ0LCB5b3Ugd291bGQgYmUgcmVzdG9yaW5nIGZyb20gYSBiYWNrdXAgcmlnaHQgbm93Lg</stri
 								<object class="NSFont" key="NSSupport">
 									<string key="NSName">LucidaGrande</string>
 									<double key="NSSize">12</double>
-									<int key="NSfFlags">4883</int>
+									<int key="NSfFlags">16</int>
 								</object>
 								<string key="NSCellIdentifier">_NS:360</string>
 								<reference key="NSControlView" ref="126219775"/>
@@ -1460,7 +1460,7 @@ IGFsZXJ0LCB5b3Ugd291bGQgYmUgcmVzdG9yaW5nIGZyb20gYSBiYWNrdXAgcmlnaHQgbm93Lg</stri
 					<reference key="NSNextKeyView" ref="126219775"/>
 					<string key="NSReuseIdentifierKey">_NS:207</string>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {1366, 746}}</string>
+				<string key="NSScreenRect">{{0, 0}, {1024, 746}}</string>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
