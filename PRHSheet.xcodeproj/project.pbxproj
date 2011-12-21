@@ -13,6 +13,7 @@
 		313FC3D614A1B670007D3489 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 313FC3D414A1B670007D3489 /* Credits.rtf */; };
 		313FC3D914A1B670007D3489 /* PRHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 313FC3D814A1B670007D3489 /* PRHAppDelegate.m */; };
 		313FC3DC14A1B671007D3489 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 313FC3DA14A1B671007D3489 /* MainMenu.xib */; };
+		313FC3E414A1BC50007D3489 /* PRHSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 313FC3E314A1BC50007D3489 /* PRHSheet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +22,16 @@
 		313FC3C814A1B670007D3489 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		313FC3C914A1B670007D3489 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		313FC3CA14A1B670007D3489 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		313FC3CD14A1B670007D3489 /* PRHSheet-Info.plist */ = {isa = PBXFileReference; path = "PRHSheet-Info.plist"; sourceTree = "<group>"; };
+		313FC3CD14A1B670007D3489 /* PRHSheet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PRHSheet-Info.plist"; sourceTree = "<group>"; };
 		313FC3CF14A1B670007D3489 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		313FC3D114A1B670007D3489 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		313FC3D314A1B670007D3489 /* PRHSheet-Prefix.pch */ = {isa = PBXFileReference; path = "PRHSheet-Prefix.pch"; sourceTree = "<group>"; };
+		313FC3D314A1B670007D3489 /* PRHSheet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PRHSheet-Prefix.pch"; sourceTree = "<group>"; };
 		313FC3D514A1B670007D3489 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		313FC3D714A1B670007D3489 /* PRHAppDelegate.h */ = {isa = PBXFileReference; path = PRHAppDelegate.h; sourceTree = "<group>"; };
+		313FC3D714A1B670007D3489 /* PRHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRHAppDelegate.h; sourceTree = "<group>"; };
 		313FC3D814A1B670007D3489 /* PRHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRHAppDelegate.m; sourceTree = "<group>"; };
 		313FC3DB14A1B671007D3489 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		313FC3E214A1BC50007D3489 /* PRHSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRHSheet.h; sourceTree = "<group>"; };
+		313FC3E314A1BC50007D3489 /* PRHSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRHSheet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 		313FC3CB14A1B670007D3489 /* PRHSheet */ = {
 			isa = PBXGroup;
 			children = (
+				313FC3E214A1BC50007D3489 /* PRHSheet.h */,
+				313FC3E314A1BC50007D3489 /* PRHSheet.m */,
 				313FC3D714A1B670007D3489 /* PRHAppDelegate.h */,
 				313FC3D814A1B670007D3489 /* PRHAppDelegate.m */,
 				313FC3DA14A1B671007D3489 /* MainMenu.xib */,
@@ -167,6 +172,7 @@
 			files = (
 				313FC3D214A1B670007D3489 /* main.m in Sources */,
 				313FC3D914A1B670007D3489 /* PRHAppDelegate.m in Sources */,
+				313FC3E414A1BC50007D3489 /* PRHSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
