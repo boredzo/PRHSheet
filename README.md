@@ -7,6 +7,7 @@
 - No need to talk to `NSApp` for something that's none of its business
 - No more callback object and selector; instead, you pass a block
 - Automatically orders itself out when you end or the user ends the sheet
+- Function to convert a return code to a string for debug log output
 
 ### Sample
 
