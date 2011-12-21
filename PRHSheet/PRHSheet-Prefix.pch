@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'PRHSheet' target in the 'PRHSheet' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+#endif
