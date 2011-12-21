@@ -46,7 +46,6 @@
 }
 
 - (void) sheetDidEnd:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo {
-	NSLog(@"Sheet ended with return code: %@", PRHSheetDebugStringForReturnCode(returnCode));
 	NSWindow *window = (__bridge NSWindow *)contextInfo;
 	PRHSheetCompletionHandler handler = [self->parentWindowsToCompletionHandlers objectForKey:window];
 
