@@ -25,10 +25,7 @@
 #pragma mark -
 
 - (void) beginOnWindow:(NSWindow *)window completionHandler:(PRHSheetCompletionHandler)handler {
-	if (handler)
-		handler = [handler copy];
-
-	[NSApp beginSheet:self modalForWindow:window modalDelegate:self didEndSelector:@selector(sheetDidEnd:returnCode:contextInfo:) contextInfo:(__bridge void *)handler];
+	[NSApp beginSheet:self modalForWindow:window modalDelegate:self didEndSelector:@selector(sheetDidEnd:returnCode:contextInfo:) contextInfo:(__bridge_retained void *)handler];
 }
 
 - (void) end {
@@ -40,7 +37,7 @@
 }
 
 - (void) sheetDidEnd:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo {
-	PRHSheetCompletionHandler handler = (__bridge PRHSheetCompletionHandler)contextInfo;
+	PRHSheetCompletionHandler handler = (__bridge_transfer PRHSheetCompletionHandler)contextInfo;
 
 	if (handler)
 		handler(returnCode);
