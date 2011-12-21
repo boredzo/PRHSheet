@@ -11,17 +11,11 @@
 - (void) sheetDidEnd:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo;
 @end
 @implementation PRHSheet
-{
-	NSMapTable *parentWindowsToCompletionHandlers;
-}
 
 - (id) initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)aStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag screen:(NSScreen *)screen {
 	aStyle &= ~(NSTitledWindowMask|NSMiniaturizableWindowMask);
 	aStyle |= NSClosableWindowMask;
-	if ((self = [super initWithContentRect:contentRect styleMask:aStyle backing:bufferingType defer:flag screen:screen])) {
-		parentWindowsToCompletionHandlers = [[NSMapTable alloc] initWithKeyOptions:NSMapTableStrongMemory valueOptions:NSMapTableStrongMemory capacity:1UL];
-	}
-	return self;
+	return [super initWithContentRect:contentRect styleMask:aStyle backing:bufferingType defer:flag screen:screen];
 }
 
 - (BOOL) canBecomeKeyWindow {
@@ -32,9 +26,9 @@
 
 - (void) beginOnWindow:(NSWindow *)window completionHandler:(PRHSheetCompletionHandler)handler {
 	if (handler)
-		[self->parentWindowsToCompletionHandlers setObject:handler forKey:window];
+		handler = [handler copy];
 
-	[NSApp beginSheet:self modalForWindow:window modalDelegate:self didEndSelector:@selector(sheetDidEnd:returnCode:contextInfo:) contextInfo:(__bridge void *)window];
+	[NSApp beginSheet:self modalForWindow:window modalDelegate:self didEndSelector:@selector(sheetDidEnd:returnCode:contextInfo:) contextInfo:(__bridge void *)handler];
 }
 
 - (void) end {
@@ -46,8 +40,7 @@
 }
 
 - (void) sheetDidEnd:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo {
-	NSWindow *window = (__bridge NSWindow *)contextInfo;
-	PRHSheetCompletionHandler handler = [self->parentWindowsToCompletionHandlers objectForKey:window];
+	PRHSheetCompletionHandler handler = (__bridge PRHSheetCompletionHandler)contextInfo;
 
 	if (handler)
 		handler(returnCode);
