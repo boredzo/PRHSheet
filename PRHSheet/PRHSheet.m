@@ -13,8 +13,8 @@
 @implementation PRHSheet
 
 - (id) initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)aStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag screen:(NSScreen *)screen {
-	aStyle &= ~(NSTitledWindowMask|NSMiniaturizableWindowMask);
-	aStyle |= NSClosableWindowMask;
+	aStyle &= ~((NSUInteger)NSTitledWindowMask|(NSUInteger)NSMiniaturizableWindowMask);
+	aStyle |= (NSUInteger)NSClosableWindowMask;
 	return [super initWithContentRect:contentRect styleMask:aStyle backing:bufferingType defer:flag screen:screen];
 }
 
